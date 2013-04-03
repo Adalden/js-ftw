@@ -3,11 +3,28 @@
 body
   background-color: rgb(145, 145, 255)
 
+a
+  color: blue
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+
+.box
+  background-color: white
+  padding: 50px
+  border-radius: 15px
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, .5)
+
 .step
   width: 1000px
 
+  .title
+    font-size: 55px
+
 #title-slide
   text-align: center
+  padding: 150px 100px
 
   .title
     font-weight: bold
@@ -25,5 +42,72 @@ body
     font-size: 40px
 
 #history-slide
-  .title
-    font-size: 35px
+  height: 650px
+
+  .quote
+    margin: 0 auto
+    padding-top: 20px
+    padding-bottom: 100px
+    width: 600px
+    font-size: 26px
+
+    img
+      width: 70px
+
+    .author
+      text-align: right
+
+  .facts
+    float: left
+    padding-left: 100px
+
+    ul
+      padding-bottom: 40px
+      font-size: 24px
+
+      li
+        padding-bottom: 10px
+
+    table
+      border-spacing: 0
+      border-radius: 15px
+      border: 1px solid
+      font-size: 20px
+      text-align: center
+
+      tr
+        &:first-child
+          td
+            border-top: none
+
+      td
+        padding: 25px 50px
+        border-top: 1px solid
+
+        &:first-child
+          border-right: 1px solid
+  .netscape
+    padding-left: 100px
+    padding-top: 40px
+
+#uses-slide
+  padding: 290px 50px
+  height: 600px
+  text-align: center
+
+  .section
+    display: inline-block
+    vertical-align: top
+
+    .title
+      padding-bottom: 50px
+
+    &.second
+      padding-left: 300px
+  ul
+    text-align: left
+
+    li
+      padding-bottom: 10px
+      font-size: 35px
+
