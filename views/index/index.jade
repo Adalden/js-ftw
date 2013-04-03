@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  #impress
+    .step#title-slide
+      .title Javascript
+      .subtitle The World's Most Misunderstood Programming Language
+    .step#author-slide(data-x=-200, data-y=200, data-scale=.5)
+      .text By Dallin Osmun
+      .text And Justin Permann
+    .step#history-slide(data-x=800, data-rotate-z=-90, data-rotate-y=70)
+      .title History
+      .text Java + Scheme + Self = ECMAScript
+      .text Brenden Eich bleh bleh bleh
+    //- .step
+    //-   p content goes here
+    //- .step(data-x=200, data-y=0, data-z=0, data-scale=2)
+    //-   p and here
+    //- .step(data-x=200, data-y=400, data-z=0, data-rotate-x=0, data-rotate-y=0, data-rotate-z=90)
+    //-   p and here
+
+append scripts
+  script(src='/js/lib/impress.js')
+  script
+    impress().init();
