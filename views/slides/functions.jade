@@ -1,1 +1,17 @@
 .title First Class Functions
+pre(style='font-size:20px; padding-top: 30px')
+  |function wrap(name, fn) {
+  |    return function () {
+  |        console.log('calling', name);
+  |        var retVal = fn();
+  |        console.log('finished', name);
+  |        return retVal;
+  |    };
+  |}
+  | 
+  |var sayHi = function () {
+  |    console.log('hi');
+  |};
+  | 
+  |sayHi = wrap(sayHi);
+  |sayHi();
