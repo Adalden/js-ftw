@@ -1,0 +1,8 @@
+.title Objects
+pre(style='font-size:20px; padding-top: 30px')
+  |var empty = {};
+  |var person = { name: "bubba", age: 30 };
+  |person.speak = function () {
+  |    console.log('hello, my name is ' + this.name);
+  |}
+  |person.speak();

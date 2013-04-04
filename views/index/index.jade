@@ -3,64 +3,23 @@ extends ../layout
 block content
   #impress
     .step.box#title-slide
-      .title Javascript
-      .subtitle The World's Most Misunderstood Programming Language
+      include ../slides/title
     .step#author-slide(data-x=-200, data-y=200, data-z=1, data-scale=.5)
-      .text
-        a(href='https://twitter.com/dallinosmun') @DallinOsmun
-      .text
-        a(href='#') @JustinPermann
+      include ../slides/author
     .step.box#history-slide(data-x=600, data-z=-560, data-rotate-y=90)
-      .title History
-      .quote
-        img(src='/img/left-quote.jpg')
-        span Java is to JavaScript as Car is to Carpet.
-        img(src='/img/right-quote.jpg')
-        .author - Joe Sondow, Netflix
-      .facts
-        ul
-          li Brenden Eich created Javascript in 10 days.
-          li Mocha => LiveScript => Javascript => ECMAScript
-          li Java + Scheme + Self = ECMAScript
-        table
-          tr
-            td(style='border-top-left-radius: 50px 100px;') Java
-            td Syntax
-          tr
-            td Self
-            td Prototypes
-          tr
-            td Scheme
-            td Lambdas
-      img.netscape(src='/img/netscape.png')
-
+      include ../slides/history
+    .step.box#benefits-slide(data-z=-1120, data-rotate-y=180)
+      include ../slides/benefits
     .step.box#uses-slide(data-z=-560, data-y=-380, data-rotate-x=90, data-rotate-z=-90)
-      .section
-        .title Implementations
-        ul
-          li V8 / Browsers
-          li NodeJS
-          li Rhino
-          li Firefox Phone
-          li Windows 8
-          li GNOME
-      .section.second
-        .title Targets
-        ul.targets
-          li CoffeeScript
-          li Dart
-          li Closure
-          li TypeScript
-          li GWT
-          li Emscripten
-          li asm.js
-
-    .step#functions(data-x=800, data-y=-2100, data-z=200, data-scale=2, data-rotate-y=60, data-rotate-x=60)
-      .title First Class Functions
-
-    .step#prototypes(data-x=800, data-y=-2400, data-z=1400, data-scale=2, data-rotate-y=60, data-rotate-x=60)
-      .title Prototypes
-
+      include ../slides/uses
+    .step#functions(data-x=800, data-y=-2000, data-z=0, data-scale=2, data-rotate-y=60, data-rotate-x=60)
+      include ../slides/functions
+    .step#prototypes(data-x=800, data-y=-2600, data-z=1700, data-scale=2, data-rotate-y=60, data-rotate-x=60)
+      include ../slides/prototypes
+    .step#objects(data-x=800, data-y=-2700, data-z=2600, data-scale=2, data-rotate-y=60, data-rotate-x=60)
+      include ../slides/objects
+    .step#examples(data-x=800, data-y=-2000, data-z=-1000, )
+      .title Examples
 append scripts
   script(src='/js/lib/impress.js')
   script
